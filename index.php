@@ -22,10 +22,15 @@
         <br>
         <div class="row">
 <?php
+# Contador d'autoincrement per els anys
         for($counter=1;$counter <= 3000; $counter++){
+#Tractament dels nombres generats per les iteracions del for
+#Si el residu de la divisió del valor del contador i 4 és 0 passa a la següent condició
+#si una de les dues condicions entre els parentesis es compleix es genera la targeta amb el valor del contador.
+
             if($counter%4==0 && (($counter%100!==0) || $counter%400==0))   {
             ?>
-            <div class="card col-sm-2">
+            <div class="card col-sm-2"> 
             <div class="card-header"> <?= $counter; ?> </div>
             </div>
         <?php
